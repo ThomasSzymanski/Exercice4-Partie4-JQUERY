@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <title>Exercice 5</title>
+</head>
+<body>
+  <form>
+    <label>Nom : </label><input type="text" name="input" id="surname"/><br/>
+    <label>Prénom : </label><input type="text" name="input" id="name"/><br/>
+    <label>Date de naissance : </label><input type="text" name="input" id="born"/><br/>
+    <label>Lieu de naissance : </label><input type="text" name="input" id="city"/><br/>
+    <label>Emploi : </label><input type="text" name="input" id="job"/></br>
+    <label>Société : </label><input type="text" name="input" id="society"/></br>
+  </form><br/>
+  <button type="button" id="valider">Obtenir ma présentation personnalisée</button><br/><br/><br/>
+  <div id="presentation" style="color:red ; text-align: center ; font-size: 25px ; font-weight: bold"></div>
+  <script>
+    $(function(){
+        
+        $('#valider').click( function(){
+          var surname = $('#surname').val();
+          var name = $('#name').val();
+          var born = $('#born').val();
+          var city = $('#city').val();
+          var job = $('#job').val();
+          var society = $('#society').val();
+          $('#presentation').text(name + ' ' + surname + ', né le ' + born + ' à ' + city + ', actuellement ' + job + ' à ' + society + '.');
+        });
+    });
+  </script> 
+</body>
+</html>
